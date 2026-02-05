@@ -6,6 +6,7 @@ class student
     public:
     int mark[5];
     
+    
     void input()
     {
         for(int i=0;i<5;i++)
