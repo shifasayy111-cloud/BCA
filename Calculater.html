@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: arial;
+            background-color:rgb(245, 162, 174);
+            text-align:center;
+            margin-top:50px;
+        }
+        .calc{
+            background-color:rgb(223, 111, 170);
+            padding: 20px;
+            width: 300px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgb(56, 47, 47);
+        }
+        input{
+            width: 90%;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 5%;
+            background-color: snow;
+        }
+    </style>
+</head>
+<body>
+    <div class="calc">
+    <h1> CALCULTER </h1>
+    <input type="number" id="num1" placeholder="Enter The First Number">
+    <input type="number" id="num2" placeholder="Enter The Second Number"><br><br>
+    <button onclick="add()">+</button>
+    <button onclick="sub()">-</button>
+    <button onclick="mul()">*</button>
+    <button onclick="div()">/</button>
+    <h3 id="result">Result:</h3>
+    </div>
+    <script> 
+        function add()
+        {
+            let a=Number(document.getElementById ("num1").value);
+            let b=Number(document.getElementById ("num2").value);
+            document.getElementById("result").innerHTML="result:"+(a+b);
+        }
+        function sub()
+        {
+            let a=Number(document.getElementById ("num1").value);
+            let b=Number(document.getElementById ("num2").value);
+            document.getElementById("result").innerHTML="result:"+(a-b);
+        }
+        function mul()
+        {
+            let a=Number(document.getElementById ("num1").value);
+            let b=Number(document.getElementById ("num2").value);
+            document.getElementById("result").innerHTML="result:"+(a*b);
+        }
+        function div()
+        {
+            let a=Number(document.getElementById ("num1").value);
+            let b=Number(document.getElementById ("num2").value);
+            if(b==0)
+            {
+                document.getElementById("result").innerHTML="result:";
+            }
+            else
+            {
+                document.getElementById("result").innerHTML="result:"+(a/b);
+            }
+        }
+    </script>
+</body>
+</html>
